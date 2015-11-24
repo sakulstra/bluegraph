@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Visualisation"
+        android:key="pref_visualisation">
+        <PreferenceScreen
+            android:key="button_voicemail_category_key"
+            android:title="Graph"
+            android:persistent="false">
+            <CheckBoxPreference
+                android:key="pref_xgridlabels"
+                android:title="x-Labels"
+                android:summary="Display x-axis Grid labels"
+                android:defaultValue="false" />
+            <CheckBoxPreference
+                android:key="pref_ygridlabels"
+                android:title="y-Labels"
+                android:summary="Display y-axis Grid labels"
+                android:defaultValue="true" />
+            <EditTextPreference
+                android:key="pref_windowSize"
+                android:title="Window Size"
+                android:summary="@string/window_size"
+                android:numeric="integer"
+                android:defaultValue="200" />
+            <CheckBoxPreference
+                android:disableDependentsState="true"
+                android:key="pref_yAutoScale"
+                android:title="Y-auto-scale"
+                android:defaultValue="true" />
+            <EditTextPreference
+                android:dependency="pref_yAutoScale"
+                android:key="pref_y_max"
+                android:title="Max"
+                android:summary="@string/max_y"
+                android:digits="0123456789.-"
+                android:inputType="numberDecimal"
+                android:defaultValue="200" />
+            <EditTextPreference
+                android:dependency="pref_yAutoScale"
+                android:key="pref_y_min"
+                android:title="Min"
+                android:summary="@string/min_y"
+                android:digits="0123456789.-"
+                android:inputType="numberDecimal"
+                android:defaultValue="-200" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="button_voicemail_category_key"
+            android:title="Terminal"
+            android:persistent="false">
+            <EditTextPreference
+                android:key="pref_lastX"
+                android:title="Display last x entries"
+                android:summary="@string/lastx"
+                android:numeric="integer"
+                android:defaultValue="200" />
+            <CheckBoxPreference
+                android:key="pref_autoNaming"
+                android:title="Timestamp on filenames"
+                android:summary="adds a timestamp to the filename"
+                android:defaultValue="false" />
+            <CheckBoxPreference
+                android:dependency="pref_autoNaming"
+                android:key="pref_timestampAdditionalName"
+                android:title="Filename + timestamp"
+                android:summary="allow an additional filename"
+                android:defaultValue="false" />
+            <CheckBoxPreference
+                android:key="pref_localEcho"
+                android:title="Local echo"
+                android:summary="show send messages in terminal"
+                android:defaultValue="true" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Input Stream"
+        android:key="pref_input_stream">
+        <EditTextPreference
+            android:key="pref_delimiter"
+            android:title="Delimiter"
+            android:summary="@string/delimiter"
+            android:defaultValue="," />
+        <CheckBoxPreference
+            android:key="pref_startTagOn"
+            android:title="Allow Start Tag"
+            android:summary="looks for a start tag which has to be removed"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:dependency="pref_startTagOn"
+            android:key="pref_startTag"
+            android:title="StartTag"
+            android:summary="The start tag for every single message"
+            android:defaultValue="" />
+    </PreferenceCategory>
+    <!--<CheckBoxPreference
+        android:key="pref_actionbar"
+        android:title="Hide actionbar"
+        android:summary="@string/nyi"
+        android:defaultValue="false" />
+    <CheckBoxPreference
+        android:key="pref_fileLog"
+        android:title="File logging"
+        android:summary="@string/nyi"
+        android:defaultValue="true" />-->
+</PreferenceScreen>

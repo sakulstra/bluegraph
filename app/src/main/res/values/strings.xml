@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">BlueGraph</string>
+
+    <string name="title_section1">Devices</string>
+    <string name="title_section2">Settings</string>
+    <string name="title_section3">Graph</string>
+    <string name="title_section4">Terminal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="window_size">Size of the window</string>
+    <string name="nyi">not yet implemented</string>
+    <string name="delimiter">Seperator between data values</string>
+
+    <string name="max_y">Maximum y scale</string>
+    <string name="min_y">Minimum y scale</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lastx">gets laggy on huge data</string>
+</resources>

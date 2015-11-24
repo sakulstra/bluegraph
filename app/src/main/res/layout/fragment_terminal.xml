@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lukas.androidbluetooth.TerminalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="60dip"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/terminalTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </ScrollView>
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Start Logging"
+        android:id="@+id/logButton"
+        android:layout_gravity="left|bottom" />
+
+    <Button
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Send Message"
+        android:id="@+id/sendButton"
+        android:layout_gravity="right|bottom" />
+</FrameLayout>
